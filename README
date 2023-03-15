@@ -1,0 +1,9 @@
+This Flixter3 app is a copy of Flixter2
+I tried to use JetPack navigation to go from MainActivity to DetailActivity but fails because error:
+"A YouTubePlayerView can only be created with an Activity which extends YouTubeBaseActivity as its context."
+
+Currently in Flixter3, activity_main.xml contains only a FragmentContainerView
+All main logic is in MainFragment; MainActivity is just empty
+MainFragment navigates to DetailFragment, which contains all detail logic, but derives from Fragment
+However, as the error above indicates, the container cannot be a Fragment and must be an Activity
+that derives from YouTubeBaseActivity
